@@ -49,3 +49,11 @@ for i in range(len(R_list)):
 		do_they_intersect(R_list[i],coor_list[n][0],coor_list[n][1],coor_list[n][2],coor_list[n][3])
 
 print count
+
+#### The above will solve the problem in O(mn) m-> number of circles , n->number of lines
+#### A better solution of O(nlogm) can be given . The idea is 
+#### 1) for each line , 
+####		a) Find the 
+#### 
+#### 
+#### 
