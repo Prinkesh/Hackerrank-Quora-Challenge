@@ -49,3 +49,16 @@ for i in range(len(R_list)):
 		do_they_intersect(R_list[i],coor_list[n][0],coor_list[n][1],coor_list[n][2],coor_list[n][3])
 
 print count
+
+#### The above  will solve the problem in O(mn) m-> number of circles , n->number of lines
+#### A better solution of O(nlogm) can be given . The idea is :
+#### 1) Sort the array of radius in incresing order
+#### 2) For each line , 
+####		A) Select the point which has minimum distance from origin (i.e the innermost of the two).
+####            B) Now we find the innermost circle which has this start point inside it . (Can be done in O(logm) using Binary Search )
+####		C) Select the point which has maximum distance from origin (i.e the outermost of the two).
+####            D) Now we find the Outermost circle which has this end point outside it . (Can be done in O(logm) using Binary Search )
+#### 	 Therefore number of circles this line intersects is (Result_CircleIndexOf( Step D) - Result_CircleIndexOf( Step A) + 1 )
+#### 3) Repeat Step 2 , n times. 
+##### So O(mlogn) 
+#### 
